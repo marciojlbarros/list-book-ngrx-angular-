@@ -1,0 +1,10 @@
+<figure class="book-item" *ngFor="let book of books">
+    <blockquote class="blockquote">
+        <p><strong>{{book.volumeInfo.title}}</strong></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+        <p><em>author: {{book.volumeInfo.authors}}</em></p>
+        <button class="btn btn-success btn-sm ms-3" (click)="add.emit(book.id)" data-test="add-button">Add to
+            Collection</button>
+    </figcaption>
+</figure>
